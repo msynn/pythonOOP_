@@ -11,11 +11,11 @@ class User:
         return f"{self.name} - {self.role} - {self.damage}"
 
     def update_role(self, new_role = "fighter"):
-        if self.role == "assassin": # Jika role anda adalah assassin, maka anda bisa berubah role fighter.
-        # role selain assasin tidak bisa berubah.    
+        if self.role == "assassin": # Jika role anda adalah assassin, maka anda bisa berubah role fighter.  
             self.role = new_role
+        else: # role selain assasin tidak bisa berubah.  
+            print("Role anda tidak bisa diubah")
         
-# instance variable VS class variable
 
 zilong = User("zilong", 100, "assassin")
 aurora = User("aurora", 200, "mage")
