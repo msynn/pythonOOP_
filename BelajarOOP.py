@@ -22,7 +22,7 @@ aurora = User("aurora", 200, "mage")
 argus = User("argus", 300, "warrior")
 
 
-print(zilong.info())
+print(zilong.info())     
 zilong.update_role()
 print(zilong.info())
 

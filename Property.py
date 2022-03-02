@@ -21,11 +21,8 @@ class User :
         else :
             print("Role anda tidak bisa diubah")
 
-
-
 zilong = User("zilong", 100, "assassin")
-# print(zilong.info())
-# zilong.role 
+print(zilong.info())
 zilong.role = "mage"
 print(zilong.info())
 print(zilong.role)

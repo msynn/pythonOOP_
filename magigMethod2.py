@@ -7,10 +7,10 @@ class Game : # class Game
         return f"{self.tittle} - {self.price}"
     
     def __eq__(self, other) : # ==
-        return self.tittle == other.tittle
+        return self.tittle == other.tittle 
 
     def __gt__(self, other) : # > 
-        return self.price > other.price
+        return self.price > other.price 
 
     def __add__(self, other) : # +
         return self.price + other.price
@@ -18,6 +18,8 @@ class Game : # class Game
 zilong = Game("Mobile Legends", 32000)
 zilong2 = Game("Mobile Legends", 34000)
 luffy = Game("Bounty Hunter", 25000)
-print(zilong2 == luffy) # zilong2 == luffy == False
-print(zilong > luffy) # zilong > luffy == True
-print(zilong + luffy) # zilong + luffy == 50000
+
+
+print(zilong2 == luffy) # zilong2 == luffy = False
+print(zilong > luffy) # zilong > luffy = True
+print(zilong + luffy) # zilong + luffy = 57000
