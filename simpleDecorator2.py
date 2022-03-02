@@ -5,7 +5,7 @@ def info(func):
         print("-" * 30)
     return wrapper
 
-@info
+@info # @info(judul)
 def judul():
     print("Mobile Legends BANG - BANG")
     

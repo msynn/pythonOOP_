@@ -1,6 +1,3 @@
-from tkinter import CENTER
-
-
 def info(func):
     def wrapper():
         print("-" * 30)
