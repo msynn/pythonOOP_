@@ -1,5 +1,4 @@
 import csv
-
 class Item:
     pay_rate = 0.8 # the pay rate after 20% discount
     all = []
@@ -26,8 +25,25 @@ class Item:
     
     @classmethod    
     def instantiate_from_csv(cls):
-        
-        
+        with open('items.csv', 'r') as f:
+            reader = csv.DictReader(f)
+            items = list(reader)
+            
+        for item in items:
+            Item(
+                name=item.get('name'),
+                price=int(item.get('price')),
+                quantity=int(item.get('quantity')), 
+            )
+    @staticmethod
+    def is_integer(num):
+        # we will count out the floats that are point zero
+        # For i.e: 5.0, 10.0
+        if isintance(num, float):
+            # Count ut the floats that are point zero
+            return num.is_integer()
+        elif isintance(num, int):
+            return True
     
     def __repr__(self):
         return f"Item('{self.name}', {self.price}, {self.quantity})"
@@ -35,3 +51,4 @@ class Item:
 
 
 Item.instantiate_from_csv()
+print(Item.all)

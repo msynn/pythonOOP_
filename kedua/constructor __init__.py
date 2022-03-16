@@ -30,6 +30,6 @@ item1 = Item("Phone", 200, 9)
 item2 = Item("Laptop", 2000, 3)
 item3 = Item("Mouse", 50, 10)
 item4 = Item("Headset", 80, 4)
-item5 = Item("Bag", 120, 8)
+item5 = Item("keyboard", 120, 8)
 
 print(Item.all)
