@@ -32,17 +32,17 @@ class Item:
         for item in items:
             Item(
                 name=item.get('name'),
-                price=int(item.get('price')),
+                price=float(item.get('price')),
                 quantity=int(item.get('quantity')), 
             )
     @staticmethod
     def is_integer(num):
         # we will count out the floats that are point zero
         # For i.e: 5.0, 10.0
-        if isintance(num, float):
+        if isinstance(num, float):
             # Count ut the floats that are point zero
             return num.is_integer()
-        elif isintance(num, int):
+        elif isinstance(num, int):
             return True
     
     def __repr__(self):
