@@ -1,4 +1,4 @@
-import csv
+import csv :
 class Item:
     pay_rate = 0.8 # the pay rate after 20% discount
     all = []
@@ -33,7 +33,7 @@ class Item:
             Item(
                 name=item.get('name'),
                 price=float(item.get('price')),
-                quantity=int(item.get('quantity')), 
+                quantity=int(item.get('quantity')),
             )
     @staticmethod
     def is_integer(num):
