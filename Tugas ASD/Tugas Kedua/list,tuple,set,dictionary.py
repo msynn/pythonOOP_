@@ -39,7 +39,8 @@ print("======================")
 random = ("a", "b", "c", "d", "e")
 # update value (tidak bisa)
 # remove value (tidak bisa)
-# tambah value (tidak bisa)
+# tambah value 
+random = ("f")
 for i in random:
     print(i)
 print("======================")
