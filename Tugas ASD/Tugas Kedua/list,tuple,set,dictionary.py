@@ -21,12 +21,19 @@ for i in buah:
 print("======================")
 
 # Set
-value = {1,2,3,4,5}
+value = {1,2,3,4,5, "string1", "string2", "string3"}
 value2 = {3,4,5,6,7,8,9}
 union = (value | value2)
-# update value (tidak bisa)
-# remove value (tidak bisa)
-# tambah value (tidak bisa)
+# update value (set tidak bisa di update)
+# remove value tidak memiliki indeks
+value.remove(1) # menghapus value 1
+value.remove("string1") # menghapus value string1
+# tambah value
+value.add("angka")
+valuetambah = {"ini adalah value tambahan"}
+value.update(valuetambah)
+print(value)
+print("======================")
 intersection = (value & value2)
 for i in union:
     print(i)
@@ -39,8 +46,7 @@ print("======================")
 random = ("a", "b", "c", "d", "e")
 # update value (tidak bisa)
 # remove value (tidak bisa)
-# tambah value 
-random = ("f")
+# tambah value (tidak bisa)
 for i in random:
     print(i)
 print("======================")
