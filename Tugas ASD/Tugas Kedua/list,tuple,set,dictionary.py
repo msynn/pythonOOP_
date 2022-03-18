@@ -24,7 +24,7 @@ print("======================")
 value = {1,2,3,4,5, "string1", "string2", "string3"}
 value2 = {3,4,5,6,7,8,9}
 union = (value | value2)
-# update value (set tidak bisa di update)
+# update value
 # remove value tidak memiliki indeks
 value.remove(1) # menghapus value 1
 value.remove("string1") # menghapus value string1
