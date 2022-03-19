@@ -1,0 +1,5 @@
+ini adalah data pertama
+ini adalah data kedua
+ini adalah data ketiga
+ini adalah data keempat
+Baris ini dibuat dengan menggunakan mode append
