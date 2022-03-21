@@ -12,15 +12,15 @@
 buah = ["apel", "jeruk", "mangga", "melon", "nangka"]
 
 # Update value
-# buah[0] = "Lemon"
+buah[0] = "Lemon"
 
 # # menghapus value
 # # indexnya
-# buah.pop(3)
+buah.pop(3)
 # # itemnya
-# buah.remove("nangka")
+buah.remove(nangka)
 # # indexnya
-# del buah[0]
+del buah[0]
 
 # Menambahkan value
 buah.append("nanas")
