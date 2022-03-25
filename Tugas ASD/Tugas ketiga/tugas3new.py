@@ -144,6 +144,7 @@ def menu():
             garis()
             print(' TERIMAKASIH '.center(40,"+"))
             garis()
+            break
 
         
 menu()
