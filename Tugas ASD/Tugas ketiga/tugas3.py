@@ -28,9 +28,9 @@ def menghapus():
     print('-'*50)
     print('Menghapus barang'.center(50,'='))
     print('-'*50)
-    delete = int(input('Kode barang\t: '))
+    delete = input('Kode barang\t: ')
     if delete in tampungan_barang :
-        tampungan_barang.pop(delete)
+        tampungan_barang.remove()
     else :
         print('Kode barang tidak ada!'.center(50,'-'))
     # Exit
@@ -50,17 +50,24 @@ def cek_barang():
     print("\n",'-'*50)
     
     # Edit
-    print("1. Edit")
-    print("2. Kembali ke menu!")
-    pilihan = int(input("Masukkan Pilihan : "))
-    if pilihan == 1:
-        print("Menu Edit".center(50,'-'))
+    print("1. Edit Nama barang")
+    print("2. Edit Harga barang")
+    print("3. Kembali ke menu!")
+    pilihan = input("Masukkan Pilihan : ")
+    if pilihan == "1":
+        print("Edit Nama Barang".center(50,'-'))
         edit = input("Masukkan nama barang yang akan di edit : ")
         if edit in tampungan_barang[0]:
             edit_jadi = input("Ubah ke : ")
             tampungan_barang[edit] = edit_jadi
         else:
             print('barang tidak ditemukan!')
+    elif pilihan == "2":
+        print("Edit Harga Barang".center(50,'-'))
+        edit = input("Masukkan nama barang yang akan di edit : ")
+        if edit in tampungan_barang[1]:
+            edit_jadi = int(input("Ubah ke : Rp. "))
+            tampungan_barang[int(edit)] = edit_jadi       
     else :
         menu()
             
