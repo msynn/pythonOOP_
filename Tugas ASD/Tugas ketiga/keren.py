@@ -160,7 +160,7 @@ def menu():
             garis()
             print(' TERIMAKASIH '.center(44,"+"))
             garis()
-            A = False
+            break
 
         
 menu()

@@ -1,9 +1,8 @@
-data1 = {1,2,3,4,5}
-data2 = {4,5,6,7,8,9}
+A = {"AKU","KAMU","DIA","KITA","KAMI"}
+B = {True, 10, 1.98, "HEYY"}
+print(A)
+print(B)
+# Output
+# {'KAMI', 'AKU', 'DIA', 'KAMU', 'KITA'}
 
-# Menggunakan tanda min -
-print(data1 - data2)
-
-# Menggunakan fungsi difference
-data3 = data1.difference(data2)
-print(data3)
+# Dia akan secara random atau acak mencetak variabelnya
