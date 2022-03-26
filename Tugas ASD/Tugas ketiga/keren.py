@@ -66,6 +66,7 @@ def edit_barang() :
             print('barang tidak ditemukan!')
             pass
         lanjut()
+        
 # lanjut
 def lanjut():
     lanjut = input('Lanjut (y/n) : ')
