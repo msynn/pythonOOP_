@@ -25,8 +25,8 @@ def tambah():
                 for i in tampungan_barang :
                     print("+     ",(tampungan_barang.index(i)+1) ,"      |", (i).center(16, ' '),"+")        
             else : 
-                menu()
-            
+                break
+                        
 # Menghapus barang
 def hapus_barang():
     garis()
@@ -40,7 +40,8 @@ def hapus_barang():
             if lanjut == "y" :
                 hapus_barang()
             else :
-                menu()   
+                break
+      
         else :
             print('Barang tidak tersedia')
             hapus_barang()
@@ -65,7 +66,6 @@ def edit_barang() :
             print('barang tidak ditemukan!')
             pass
         lanjut()
-
 # lanjut
 def lanjut():
     lanjut = input('Lanjut (y/n) : ')
@@ -100,7 +100,7 @@ def cek_barang():
         if lanjut == 'y' :
             cek_barang()
         else :
-            menu()
+            break
             
 # Cek indeks
 def cek_index():
@@ -115,11 +115,12 @@ def cek_index():
             if lanjut == 'y' :
                 pass
             else :
-                menu()
+                break
 
 # menu
 def menu():
-    while True :
+    A = True
+    while A == True :
         print('-'*44)
         print("PROGRAM BARANG".center(44,'='))
         print('-'*44)
@@ -149,12 +150,17 @@ def menu():
             garis()
             print(' TERIMAKASIH '.center(44,"+"))
             garis()
-            break
+            A = False
+            exit = input('Enter untuk keluar : ')
+            if exit == ' ':
+                break
+            else :
+                break
         else :
             garis()
             print(' TERIMAKASIH '.center(44,"+"))
             garis()
-            break
+            A = False
 
         
 menu()
