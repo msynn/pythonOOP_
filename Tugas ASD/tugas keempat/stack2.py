@@ -9,18 +9,18 @@ def menu():
         print("[\t1. PUSH Data\t\t]")
         print("[\t2. POP Data\t\t]")
         print("[\t3. Clear Data\t\t]")
-        print("[\t4. Keluar \t\t]")
         print(' ','='*29)
-        pilihan = int(input('Choose Number : '))
-        if pilihan == 1 :
+        pilihan = input('Choose Number : ')
+        if pilihan == "1" :
             push()
-        elif pilihan == 2 :
+        elif pilihan == '2' :
             pop()
-        elif pilihan == 3 :
+        elif pilihan == '3' :
             clear()
         else :
             pass
 
+# PUSH berfungsi untuk memasukkan data
 def push():
     while True:
         if stack == stack_awal:
@@ -35,6 +35,7 @@ def push():
             tampungan_stack.pop()
             return
 
+# POP berfungsi untuk mengeluarkan data terakhir (atas)
 def pop():
     if stack == [] :
         print('\n')
@@ -44,6 +45,8 @@ def pop():
         if out == out :
             return  
     else :
+        print('\n')
+        print('Data berhasil di POP!'.center(34,' '))            
         tampungan_stack.append(stack[-1]) 
         stack.pop()
         return
@@ -55,9 +58,11 @@ def empty():
     else :
         print("Data STACK :".center(34,' '))
         for i in stack:
-            print("\tData STACK : [",i, "]")
+            print("Data STACK",(stack.index(i)+1),": [",i, "]")
+        print("-"*34)
         size()
         top()
+        print('\n')
 
 # Total tumpukan STACK
 def size():
