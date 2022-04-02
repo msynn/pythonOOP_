@@ -1,6 +1,7 @@
 # Stack
 def menu():
     while True :
+        print('\n')
         print('Menu Pilihan STACK'.center(34,' '))
         print(' ','='*29)
         empty()
@@ -15,6 +16,10 @@ def menu():
             push()
         elif pilihan == 2 :
             pop()
+        elif pilihan == 3 :
+            clear()
+        else :
+            pass
 
 def push():
     while True:
@@ -24,16 +29,24 @@ def push():
             print('\n')
             out = input('Press ENTER untuk keluar :')
             if out == out :
-                return
+                return          
         else :
             stack.append(tampungan_stack[-1])
+            tampungan_stack.pop()
             return
 
 def pop():
-    tampungan_stack.append(stack[-1])
-    
-    stack.pop()
-    return
+    if stack == [] :
+        print('\n')
+        print('Empty!'.center(34,' '))
+        print('\n')            
+        out = input('Press ENTER untuk keluar :')
+        if out == out :
+            return  
+    else :
+        tampungan_stack.append(stack[-1]) 
+        stack.pop()
+        return
     
 # EMPTY 
 def empty():
@@ -54,16 +67,31 @@ def size():
 def top():
     print("Data Terakhir \t :", stack[-1])
 
+# membersihkan semua stack dan mengulangi inputan
+def clear():
+    tampungan_stack.clear()
+    stack_awal.clear()
+    stack.clear()
+    print('\n')
+    print('Data has been Cleared!'.center(34,' '))
+    print('\n')
+    ulang = input('Press ENTER : ')
+    if ulang == ulang :
+        awal() 
+    
+    
 tampungan_stack = []
 stack_awal = []
 stack = []
-while True :
-    inputan = input("Masukkan data STACK : ")
-    stack.append(inputan)
-    stack_awal.append(inputan)
-    lanjut = input("Lanjut <Y/N> : ").upper()
-    if lanjut == 'Y' :
-        pass
-    else :
-        menu()
-        
+def awal():
+    while True :
+        inputan = input("Masukkan data STACK : ")
+        stack.append(inputan)
+        stack_awal.append(inputan)
+        lanjut = input("Lanjut <Y/N> : ").upper()
+        if lanjut == 'Y' :
+            pass
+        else :
+            menu()
+            
+awal()
