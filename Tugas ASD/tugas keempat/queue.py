@@ -1,76 +1,89 @@
-stack = []
+from collections import deque
+
+antrian = deque([])
+
 def menu():
     while True :
-        print('Menu Pilihan QUEUE'.center(34,' '))
-        print(' ','='*29)
-        empty()
-        print(' ','='*29)
-        print("[\t1. Enqueue Data\t\t]")
-        print("[\t2. Dequeue Data\t\t]")
-        print("[\t3. View Data\t\t]")
-        print("[\t4. Clear Data\t\t]")
-        print("[\t5. Keluar \t\t]")
-        print(' ','='*29)
-        pilihan = int(input('Choose Number : '))
-        if pilihan == 1 :
-            push()
-        elif pilihan == 2 :
-            pop()
-        elif pilihan == 3 :
-            empty()
-            keluar = input('Press Enter : ')
-            if keluar == ' ':
-                break
+        print('-'*34)
+        print(' QUEUE '.center(34,'='))
+        print('-'*34)
+        if antrian == deque([]) :
+            print('Antrian Kosong!'.center(34,' '))
+        else :
+            if len(antrian) <= 5 :
+                print('Antrian Sudah Ada!')
             else :
-                break
-        elif pilihan == 4 :
-            clear()
-        elif pilihan == 5 :
+                print("Antrian MAX!")
+            print('Total Antrian\t:', len(antrian))
+            print("Antrian Terakhir:",antrian[-1])
+        print('-'*34)
+        print("1. Enqueue")
+        print("2. Dequeue")
+        print("3. View Queue")
+        print("4. Exit")
+        pilihan = input('Choose Number : ')
+        if pilihan == '1':
+            full()
+        elif pilihan == '2':
+            dequeue()
+        elif pilihan == '3':
+            view()
+        elif pilihan == '4':
             break
-
-# PUSH / MENAMBAHKAN DATA STACK
-def push():
-    while True :
-        tambah_data = input('Masukkan Data STACK : ')
-        stack.append(tambah_data)
-        lanjut = input("Lanjut Push Data? <Y/N> : ").upper()
-        if lanjut == "Y" :
-            pass
         else :
-            break
+            print('\n')
+            print("Invalid Code!".center(34,' '))
+            print('\n')
+            press = input('Press ENTER !')
+            if press == press :
+                pass
 
-# POP / MENGHAPUS STACK
-def pop():
-    while True :
-        if stack == [] :
-            print("\n")
-            print("No Empty!".center(34,' '))
-            print("\n")
-            break
-        else :    
-            stack.pop()
-            break
-    
-# EMPTY
-def empty():
-    if stack == [] :
-        print('Empty!'.center(34,' '))
+def view():
+    print('Antrian :')
+    for i in antrian:
+        print(f"-\t{antrian.index(i)+1}.\t| {i} |")
+
+def full():
+    if len(antrian) >= 5 :
+        print('-'*34)
+        print('Antrian FULL!')
+        print('-'*34)
+        press = input(' Press ENTER !')
+        if press == press :
+            return
     else :
-        print("Data STACK :".center(34,' '))
-        for i in stack:
-            print("\tData STACK : [",i, "]")
-        print("Total Data\t:", len(stack))
-        print("Data Terakhir\t:", stack[-1])
-            
-# Clear / menghapus semua data stack
-def clear():
-    while True :
-        lanjut = input("Ingin menghapus semua Data? <Y/N> :").upper()
-        if lanjut == "Y":
-            stack.clear()
-            break
-        else :
-            break
+        enqueue()
+          
         
-menu()
+def enqueue():
+    print("-"*34)
+    print(" Menu Enqueue ".center(34,'='))
+    print('- Antrian MAX 5 -'.center(34,' '))
+    print("-"*34)
+    while True:
+        add = input("Masukkan Antrian : ")
+        antrian.append(add)
+        print('-'*34)
+        print(f" '{add}' Telah Ditambahkan ke Antrian!")
+        print('-'*34)
+        press = input('Press ENTER !')
+        if press == press :
+            return
+            
+def dequeue():
+    if len(antrian) == 0 :
+        print('\n')
+        print("Antrian Kosong!".center(34,' '))
+        print('\n')
+        return
+    else :
+        antrian.popleft()
+        print("Antrian Terdepan sudah diambil!")
+        press = input('Press ENTER !')
+        if press == press :
+            return
 
+def size():
+    print("Panjang Antrian")
+
+menu()

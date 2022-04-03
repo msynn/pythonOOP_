@@ -9,14 +9,19 @@ def menu():
         print("[\t1. PUSH Data\t\t]")
         print("[\t2. POP Data\t\t]")
         print("[\t3. Clear Data\t\t]")
+        print("[\t4. Keluar  \t\t]")        
         print(' ','='*29)
         pilihan = input('Choose Number : ')
-        if pilihan == "1" :
+        if pilihan == '1' :
             push()
         elif pilihan == '2' :
             pop()
         elif pilihan == '3' :
             clear()
+        elif pilihan == '4' :
+            out = input("ENTER untuk keluar : ")
+            if out == out :
+                break
         else :
             pass
 
@@ -27,8 +32,22 @@ def push():
             print('\n')
             print('Full!'.center(34,' '))
             print('\n')
-            out = input('Press ENTER untuk keluar :')
-            if out == out :
+            print('-'*34)
+            print("Tekan <Y> Jika ingin menambah STACK!")
+            print("Tekan <N> untuk keluar!")
+            print('-'*34)
+            out = input('Tekan <Y/N> :').upper()
+            if out == 'Y':
+                print('-'*34)
+                baru = input("Masukkan Data STACK baru : ")
+                if baru in stack_awal :
+                    print("DATA SUDAH ADA!")
+                    pass
+                else :
+                    stack.append(baru)
+                    stack_awal.append(baru)
+                    print(f'\nData {baru} Telah ditambahkan!')
+            elif out == out :
                 return          
         else :
             stack.append(tampungan_stack[-1])
@@ -74,29 +93,43 @@ def top():
 
 # membersihkan semua stack dan mengulangi inputan
 def clear():
-    tampungan_stack.clear()
-    stack_awal.clear()
-    stack.clear()
-    print('\n')
-    print('Data has been Cleared!'.center(34,' '))
-    print('\n')
-    ulang = input('Press ENTER : ')
-    if ulang == ulang :
-        awal() 
+    print('Data Anda Akan Terhapus'.center(34,' '))
+    pilihan = input('Lanjut <Y/N> : ').upper()
+    if pilihan == 'Y':
+        tampungan_stack.clear()
+        stack_awal.clear()
+        stack.clear()     
+        print('\n')
+        print('Data has been Cleared!'.center(34,' '))
+        print('\n')
+        ulang = input('Press ENTER : ')
+        if ulang == ulang :
+            awal() 
+    else :
+        return
     
     
 tampungan_stack = []
 stack_awal = []
 stack = []
 def awal():
+    print('-'*34)
+    print(" PENGINPUTAN DATA STACK ".center(34,'='))
+    print('-'*34)
     while True :
         inputan = input("Masukkan data STACK : ")
-        stack.append(inputan)
-        stack_awal.append(inputan)
-        lanjut = input("Lanjut <Y/N> : ").upper()
-        if lanjut == 'Y' :
+        if inputan in stack :
+            print('DATA SUDAH ADA!')
             pass
         else :
-            menu()
-            
+            stack.append(inputan)
+            stack_awal.append(inputan)
+            lanjut = input("Lanjut <Y/N> : ").upper()
+            if lanjut == 'Y' :
+                pass
+            elif lanjut == 'N' :
+                menu()
+            else :
+                break
+                
 awal()
