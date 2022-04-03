@@ -8,8 +8,7 @@ def menu():
         print(' ','='*29)
         print("[\t1. PUSH Data\t\t]")
         print("[\t2. POP Data\t\t]")
-        print("[\t3. Clear Data\t\t]")
-        print("[\t4. Keluar  \t\t]")        
+        print("[\t3. Clear Data\t\t]")      
         print(' ','='*29)
         pilihan = input('Choose Number : ')
         if pilihan == '1' :
@@ -18,10 +17,6 @@ def menu():
             pop()
         elif pilihan == '3' :
             clear()
-        elif pilihan == '4' :
-            out = input("ENTER untuk keluar : ")
-            if out == out :
-                break
         else :
             pass
 
@@ -50,9 +45,37 @@ def push():
             elif out == out :
                 return          
         else :
-            stack.append(tampungan_stack[-1])
-            tampungan_stack.pop()
-            return
+            print("Tekan <Y> Jika ingin menambah STACK!")
+            print("Tekan <N> untuk PUSH!")
+            print("Selain itu Kembali ke menu!")
+            print('-'*34)
+            out = input('Choose :').upper()
+            if out == 'Y':
+                print('-'*34)
+                baru = input("Masukkan Data STACK baru : ")
+                if baru in stack_awal :
+                    print("DATA SUDAH ADA!")
+                    pass
+                else :
+                    if stack == stack_awal :
+                        print('\n')
+                        print('Full!'.center(34,' '))
+                        print('\n')
+                    else :
+                        stack.append(baru)
+                        stack_awal.append(baru)
+                        print(f'\nData {baru} Telah ditambahkan!')
+            elif out == 'N' :
+                if tampungan_stack == [] :
+                    print('\n')
+                    print('Full!'.center(34,' '))
+                    print('\n')
+                else :
+                    stack.append(tampungan_stack[-1])
+                    tampungan_stack.pop()
+                    return
+            else :
+                return
 
 # POP berfungsi untuk mengeluarkan data terakhir (atas)
 def pop():
@@ -127,9 +150,7 @@ def awal():
             lanjut = input("Lanjut <Y/N> : ").upper()
             if lanjut == 'Y' :
                 pass
-            elif lanjut == 'N' :
-                menu()
             else :
-                break
+                menu()
                 
 awal()
