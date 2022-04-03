@@ -14,7 +14,7 @@ def menu():
                 print('Antrian Sudah Ada!')
             else :
                 print("Antrian MAX!")
-            print('Total Antrian\t:', len(antrian))
+            size()
             print("Antrian Terakhir:",antrian[-1])
         print('-'*34)
         print("1. Enqueue")
@@ -84,6 +84,6 @@ def dequeue():
             return
 
 def size():
-    print("Panjang Antrian")
+    print("Jumlah Antrian\t:", len(antrian))
 
 menu()
