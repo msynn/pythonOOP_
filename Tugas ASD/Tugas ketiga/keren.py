@@ -62,10 +62,11 @@ def edit_barang() :
             for i in tampungan_barang :
                 print("+ Kode Barang ".center(28," "),(tampungan_barang.index(i)+1) ,"|", (i).center(15, ' '),"+")
             print("\n",'-'*50)
+            break
         else :
             print('barang tidak ditemukan!')
-            pass
-        lanjut()
+            break
+
         
 # lanjut
 def lanjut():

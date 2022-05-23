@@ -19,3 +19,6 @@ print("Ini ketika sudah di pop pertama kali : ", tumpukan)
 print("\n")
 tumpukan.pop()
 print("Ini ketika sudah di pop kedua kali : ", tumpukan)
+
+
+# Queue

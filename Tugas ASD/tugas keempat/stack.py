@@ -46,7 +46,7 @@ def pop():
             stack.pop()
             break
     
-# EMPTY
+# EMPTY 
 def empty():
     if stack == [] :
         print('Empty!'.center(34,' '))

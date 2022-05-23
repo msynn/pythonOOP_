@@ -1,2 +1,2 @@
-from collections import deque
-print("A")
+umur = input("Masukkan umur : ")
+print(type(umur))

@@ -23,7 +23,7 @@ def tambah():
             break
 
 
-# Menu menghapus barang        
+# Menghapus Barang     
 def menghapus():
     print('-'*50)
     print('Menghapus barang'.center(50,'='))

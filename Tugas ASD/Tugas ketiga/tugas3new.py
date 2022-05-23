@@ -127,7 +127,7 @@ def menu():
 5. Cek nama barang
 6. Index Barang
 7. Keluar''')
-        pilihan = input("Pilih menu \t:").lower()
+        pilihan = input("Pilih menu \t:").upper()
         if pilihan == "1" or pilihan == "TAMBAH BARANG":
             tambah()
         elif pilihan == "2" or pilihan == "HAPUS BARANG":
@@ -146,5 +146,7 @@ def menu():
             garis()
             break
 
-        
-menu()
+
+
+
+menu() 
