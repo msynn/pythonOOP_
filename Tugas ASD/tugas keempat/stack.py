@@ -17,7 +17,7 @@ def menu():
         elif pilihan == 2 :
             pop()
         elif pilihan == 3 :
-            peek()
+            view()
         elif pilihan == 4 :
             clear()
         elif pilihan == 5 :
@@ -75,5 +75,31 @@ def size():
 def top():
     print("Data Terakhir \t :", stack[-1])
         
+def view():
+    while True :
+        if stack == [] :
+            print('-'*34)
+            print('\n')
+            print('Empty!'.center(34,' '))
+            print('\n')
+            print('-'*34)
+            lanjut = input('Press ENTER : ')
+            if lanjut == lanjut :
+                break
+        else :
+            print('\n')
+            print('-'*34)
+            print("Data STACK :".center(34,' '))
+            for i in stack:
+                print("\tData STACK : [",i, "]")
+            size()
+            top()
+            print('-'*34)
+            print('\n')
+            lanjut = input('Press ENTER : ')
+            if lanjut == lanjut :
+                break
+
+
 menu()
 
