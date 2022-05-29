@@ -100,7 +100,7 @@ def cek_barang():
             print(cek,'Tidak tersedia!')
         lanjut = input('Cek lagi? (y/n) :')
         if lanjut == 'y' :
-            cek_barang()
+            pass
         else :
             break
             
@@ -114,7 +114,7 @@ def cek_index():
             else :
                 print('Barang tidak ada!')
             lanjut = input('Cek lagi? (y/n) :').upper()
-            if lanjut == 'y' :
+            if lanjut == 'Y' :
                 pass
             else :
                 break
