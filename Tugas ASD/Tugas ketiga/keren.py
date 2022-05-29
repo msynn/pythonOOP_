@@ -37,14 +37,14 @@ def hapus_barang():
         if hapus in tampungan_barang :
             tampungan_barang.remove(hapus)
             lanjut = input('tekan y jika lanjut : ').upper()
-            if lanjut == "y" :
-                hapus_barang()
+            if lanjut == "Y" :
+                pass
             else :
                 break
       
         else :
             print('Barang tidak tersedia')
-            hapus_barang()
+            break
 
 # mengedit barang :
 def edit_barang() :
