@@ -18,7 +18,7 @@ buah[0] = "Lemon"
 # # indexnya
 buah.pop(3)
 # # itemnya
-buah.remove(nangka)
+buah.remove("nangka")
 # # indexnya
 del buah[0]
 
@@ -27,10 +27,5 @@ buah.append("nanas")
 buah.insert(0, "jambu")
 
 for buah_buahan in buah :
-    print(f"ini buah {buah.index(buah_buahan)+1}: {buah_buahan}")
+    print(buah_buahan)
     
-
-
-tupel = (1,2,3)
-tupel += (7,8,9)
-print(tupel)

@@ -8,17 +8,28 @@
 # 5. Coba tambahkan value dari masing-masing collections tersebut,
 #    jelaskan apa yang terjadi.
 
-datadiri = {"nama" : "Fyan Ramadhan", "umur" : 19, "tinggi" : 175.5, "hobi" : "bermain game"}
+# datadiri = {"nama" : "Fyan Ramadhan", "umur" : 19, "tinggi" : 175.5, "hobi" : "bermain game"}
 
-# update
-datadiri["tinggi"] = "seratus tujuh puluh"
+# # update
+# datadiri["tinggi"] = "seratus tujuh puluh"
 
-# menghapus
-datadiri.pop("hobi")
+# # menghapus
+# datadiri.pop("hobi")
 
-# Menambahkan value
-datadiri["cita2"] = "polisi"
+# # Menambahkan value
+# datadiri["cita2"] = "polisi"
  
-for i in datadiri :
-    print(f"{i} \t : {datadiri[i]}") 
+# for i in datadiri :
+#     print(f"{i} \t : {datadiri[i]}") 
     
+
+dunia = "world"
+
+print("Hello", dunia)
+
+print(f"Hello {dunia}")
+
+print('''helloworld1
+helloworld2
+helloworld3
+helloworld4''')
